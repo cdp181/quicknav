@@ -1,0 +1,5 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE servers(server_id int primary key, server_name text, wol int, server_mac text, server_ip text);
+CREATE TABLE apps(app_id int primary key, server_id int, app_name text, app_port int, app_ip text, app_url text);
+COMMIT;
