@@ -55,8 +55,8 @@ EXPOSE 21337
 VOLUME /data
 
 # Create database if it doesn't exist
-ADD database.txt /var/www/html
-RUN if [ ! -f /data/quicknav.db ]; then cat /var/www/html/database.txt | sqlite3 /data/quicknav.db; fi
+ADD database.txt /tmp/database.txt
+RUN if [ ! -f /data/quicknav.db ]; then cat /tmp/database.txt | sqlite3 /data/quicknav.db; fi
 
 # Add apache to runit
 RUN mkdir /etc/service/apache
