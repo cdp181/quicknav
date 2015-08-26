@@ -11,7 +11,7 @@ CMD ["/sbin/my_init"]
 RUN apt-get update -q
 
 # Install Dependencies
-RUN apt-get install -qy apache2 libapache2-mod-php5 wget php5-sqlite php5-curl nmap
+RUN apt-get install -qy apache2 libapache2-mod-php5 wget php5-sqlite php5-curl nmap sqlite3
 
 # Enable PHP
 RUN a2enmod php5
