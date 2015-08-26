@@ -23,12 +23,11 @@ ADD wol.php /var/www/html/wol.php
 ADD style.css /var/www/html/style.css
 ADD font-awesome.min.css /var/www/html/font-awesome.min.css
 
-# Update apache configuration with this one
+# Update apache config
 ADD apache-config.conf /etc/apache2/sites-available/000-default.conf
 ADD ports.conf /etc/apache2/ports.conf
 
-# Install plexWatchWeb v1.5.4.2
-RUN mkdir -p /var/www/html/plexWatch
+# Install binaries
 RUN mkdir -p /var/www/html/font
 RUN mkdir -p /var/www/html/images
 RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/FontAwesome.otf
