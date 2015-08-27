@@ -1,5 +1,19 @@
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
-CREATE TABLE servers(server_id int primary key, server_name text, wol int, server_mac text, server_ip text);
-CREATE TABLE apps(app_id int primary key, server_id int, app_name text, app_port int, app_ip text, app_url text);
+CREATE TABLE "apps" (
+  "app_id" integer NULL PRIMARY KEY AUTOINCREMENT,
+  "server_id" integer NULL,
+  "app_name" text NULL,
+  "app_port" integer NULL,
+  "app_ip" text NULL,
+  "app_url" text NULL
+);
+CREATE TABLE "servers" (
+  "section_size" integer NOT NULL DEFAULT '2',
+  "server_id" integer NULL PRIMARY KEY AUTOINCREMENT,
+  "server_name" text NULL,
+  "wol" integer NULL,
+  "server_mac" text NULL,
+  "server_ip" text NULL
+);
 COMMIT;
