@@ -1,5 +1,11 @@
 <html>
 <head>
+<?php
+$time = microtime();
+$time = explode(' ', $time);
+$time = $time[1] + $time[0];
+$start = $time;
+?>
 <link rel="icon" type="image/png" href="favicon.png" />
 <script>
 function loadXMLDoc(mac)
@@ -42,7 +48,7 @@ xmlhttp.send();
 
 <?php
 function teststatus($host,$port) {
-exec("nmap -p " . $port . " " . $host . " --max_rtt_timeout=50ms | grep open", $output, $result);
+exec("nmap -p " . $port . " " . $host . " --max_rtt_timeout=15ms | grep open", $output, $result);
 //print_r($output);
 if ($result == 0){
 //echo "Ping successful!";
@@ -81,7 +87,14 @@ while ($row = $result->fetchArray())
 	  }
 	  ?></ul></div></div></div><?php
  }   
- 
+
+$time = microtime();
+$time = explode(' ', $time);
+$time = $time[1] + $time[0];
+$finish = $time;
+$total_time = round(($finish - $start), 4);
+echo 'Page generated in ' . $total_time . ' seconds.'; 
 
 ?>
+<BR><a HREF="edit.php">Edit Database</a>
 </body></html>
