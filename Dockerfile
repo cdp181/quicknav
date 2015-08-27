@@ -22,6 +22,13 @@ ADD index.php /var/www/html/index.php
 ADD wol.php /var/www/html/wol.php
 ADD style.css /var/www/html/style.css
 ADD font-awesome.min.css /var/www/html/font-awesome.min.css
+ADD edit.php /var/www/html/edit.php
+ADD adelete.php /var/www/html/adelete.php
+ADD ainsert.php /var/www/html/ainsert.php
+ADD aupdate.php /var/www/html/aupdate.php
+ADD sdelete.php /var/www/html/sdelete.php
+ADD sinsert.php /var/www/html/sinsert.php
+ADD supdate.php /var/www/html/supdate.php
 
 # Update apache config
 ADD apache-config.conf /etc/apache2/sites-available/000-default.conf
