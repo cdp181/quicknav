@@ -63,7 +63,6 @@ EXPOSE 21337
 VOLUME /data
 
 # Create database if it doesn't exist
-RUN chown www-data. /data
 ADD database.txt /tmp/database.txt
 RUN if [ ! -f /data/quicknav.db ]; then cat /tmp/database.txt | sqlite3 /data/quicknav.db; fi
 
