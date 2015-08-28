@@ -1,5 +1,3 @@
-<html>
-<body>
 <?php
 $db = new SQLite3('/data/quicknav.db') or die('DB Open failed');
 
@@ -13,7 +11,3 @@ $db->exec("UPDATE apps SET app_name='$app_name',app_ip='$app_ip',app_port='$app_
 
 ?>
 Updated!
-<A HREF="edit.php">Back</A>
-<BR>
-</body>
-</html>
