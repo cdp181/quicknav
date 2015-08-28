@@ -1,5 +1,3 @@
-<html>
-<body>
 <?php
 $db = new SQLite3('/data/quicknav.db') or die('DB Open failed');
 
@@ -10,7 +8,3 @@ $db->exec("DELETE FROM apps WHERE server_id='$server_id'");
 
 ?>
 Deleted!
-<A HREF="edit.php">Back</A>
-<BR>
-</body>
-</html>
