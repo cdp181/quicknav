@@ -12,6 +12,7 @@ jQuery(document).ready(function(){
             data    : $(this).serialize(),
             success : function( response ) {
                         alert( response );
+                        location.reload();
                       }
         });
 
