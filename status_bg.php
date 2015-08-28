@@ -14,8 +14,8 @@ $rescss="statsdown";
 return array ("restatus" => $restatus, "rescss" => $rescss);
 }
 }
-$hosttest = "10.39.10.4";
-$porttest = "445";
+$hosttest = $_GET["app_id"];
+$porttest = $_GET["app_port"];
 $testarray = teststatus($hosttest, $porttest);
 if ($testarray["restatus"] == UP) {
 
