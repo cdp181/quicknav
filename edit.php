@@ -1,5 +1,25 @@
 <html>
 <head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script>
+jQuery(document).ready(function(){
+
+    jQuery('.ajaxform').submit( function() {
+
+        $.ajax({
+            url     : $(this).attr('action'),
+            type    : $(this).attr('method'),
+            data    : $(this).serialize(),
+            success : function( response ) {
+                        alert( response );
+                      }
+        });
+
+        return false;
+    });
+
+});
+</script>
 <?php
 $time = microtime();
 $time = explode(' ', $time);
@@ -29,7 +49,7 @@ $db = new SQLite3('/data/quicknav.db') or die('DB Open failed');
 $result = $db->query('SELECT server_id, server_name, server_mac, wol, section_size, server_ip FROM servers');
 while ($row = $result->fetchArray())
  {
-   ?><tr><form action="supdate.php" method="get"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>">
+   ?><tr><form action="supdate.php" method="get" class="ajaxform"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>">
       <td>Name : <input type="text" name="server_name" value="<?php echo "{$row['server_name']}";?>"></td>
       <td>Section Size : <select name="section_size">
 	    <option value="12" <?php if ($row['section_size']==12) {?>selected="selected"<?php };?>>Full row</option>
