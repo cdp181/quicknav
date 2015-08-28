@@ -62,20 +62,20 @@ while ($row = $result->fetchArray())
 	    <option value="0" <?php if ($row['wol']==0) {?>selected="selected"<?php };?>>No</option>
 	  </td>
 	  <td>Mac : <input type="text" name="server_mac" size="20" value="<?php echo $row['server_mac'];?>"></td>
-	  <td><input type="submit" value="Update" title="Modify Server"></form></td><td><form action="sdelete.php" method="get" title="Delete Server WARNING! Deletes all corresponding Apps"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>"><input type="submit" value="Delete"></form></td>
+	  <td><input type="submit" value="Update" title="Modify Server"></form></td><td><form action="sdelete.php" method="get" title="Delete Server WARNING! Deletes all corresponding Apps" class="ajaxform"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>"><input type="submit" value="Delete"></form></td>
 	 </tr><?php
    $result2 = $db->query('SELECT app_id, app_name, app_ip, app_port, app_url, server_id FROM apps WHERE server_id = ' . $row['server_id'] . '');
      while ($row2 = $result2->fetchArray())
 	  {
-	    ?><tr><form action="aupdate.php" method="get"><input type="hidden" name="app_id" value="<?php echo $row2['app_id'];?>">
+	    ?><tr><form action="aupdate.php" method="get" class="ajaxform"><input type="hidden" name="app_id" value="<?php echo $row2['app_id'];?>">
 		   <td>App Name : <input type="text" name="app_name" value="<?php echo "{$row2['app_name']}";?>"></td>
 		   <td>App IP : <input type="text" name="app_ip" value="<?php echo "{$row2['app_ip']}";?>"></td>
 		   <td>App Port : <input type="text" name="app_port" value="<?php echo "{$row2['app_port']}";?>"></td>
 		   <td>App URL : <input type="text" name="app_url" value="<?php echo "{$row2['app_url']}";?>"></td>
-		   <td><input type="submit" value="Update" title="Modify App"></form></td><td><form action="adelete.php" method="get" title="Delete App"><input type="hidden" name="app_id" value="<?php echo $row2['app_id'];?>"><input type="submit" value="Delete"></form></td>
+		   <td><input type="submit" value="Update" title="Modify App"></form></td><td><form action="adelete.php" method="get" title="Delete App" class="ajaxform"><input type="hidden" name="app_id" value="<?php echo $row2['app_id'];?>"><input type="submit" value="Delete"></form></td>
 		  </tr><?php
 	  }?>
-	<tr><form action="ainsert.php" method="get"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>">
+	<tr><form action="ainsert.php" method="get" class="ajaxform"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>">
 		   <td>App Name : <input type="text" name="app_name" title="Application Name"></td>
 		   <td>App IP : <input type="text" name="app_ip" title="IP Address to test App"></td>
 		   <td>App Port : <input type="text" name="app_port" title="Port to test App"></td>
