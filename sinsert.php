@@ -1,5 +1,3 @@
-<html>
-<body>
 <?php
 $db = new SQLite3('/data/quicknav.db') or die('DB Open failed');
 
@@ -12,6 +10,3 @@ $db->exec("INSERT INTO servers (server_name,section_size,wol,server_mac) VALUES 
 
 ?>
 Server <?php echo $_GET["server_name"];?> Added!
-<A HREF="edit.php">Back</A>
-</body>
-</html>
