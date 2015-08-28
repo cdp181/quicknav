@@ -29,6 +29,7 @@ ADD aupdate.php /var/www/html/aupdate.php
 ADD sdelete.php /var/www/html/sdelete.php
 ADD sinsert.php /var/www/html/sinsert.php
 ADD supdate.php /var/www/html/supdate.php
+ADD jquery.aCollapTable.js /var/www/html/jquery.aCollapTable.js
 
 # Update apache config
 ADD apache-config.conf /etc/apache2/sites-available/000-default.conf
