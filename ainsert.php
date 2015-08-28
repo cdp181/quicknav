@@ -1,5 +1,3 @@
-<html>
-<body>
 <?php
 $db = new SQLite3('/data/quicknav.db') or die('DB Open failed');
 
@@ -13,7 +11,3 @@ $db->exec("INSERT INTO apps (app_name,app_ip,app_port,app_url,server_id) VALUES 
 
 ?>
 Application <?php echo $_GET["app_name"];?> Added!
-<A HREF="edit.php">Back</A>
-<BR>
-</body>
-</html>
