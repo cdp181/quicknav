@@ -62,15 +62,6 @@ $rescss="statsdown";
 return array ("restatus" => $restatus, "rescss" => $rescss);
 }
 }
-//$testarray = teststatus("192.168.0.200","99");
-//echo $testarray["restatus"];
-//echo $testarray["rescss"];
-
-/**
- * $db->exec("INSERT INTO servers (server_id,server_name,wol,server_mac,server_ip) VALUES ('1','unRAID','1','00:25:90:a9:68:cd','192.168.0.150')");
- * $db->exec("INSERT INTO apps (app_id,server_id,app_name,app_port,app_ip,app_url) VALUES ('1','1','unRAID','80','192.168.0.150','http://192.168.0.150')");
-*/
-
 
 $db = new SQLite3('/data/quicknav.db') or die('DB Open failed');
 
