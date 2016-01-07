@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.15
+FROM phusion/baseimage:0.9.16
 MAINTAINER cdp181 <chris@smokingcures.com>
 ENV DEBIAN_FRONTEND noninteractive
 
