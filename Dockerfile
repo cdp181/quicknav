@@ -25,6 +25,7 @@ ADD font-awesome.min.css /var/www/html/font-awesome.min.css
 ADD edit.php /var/www/html/edit.php
 ADD adelete.php /var/www/html/adelete.php
 ADD ainsert.php /var/www/html/ainsert.php
+ADD status_bg.php /var/www/html/status_bg.php
 ADD aupdate.php /var/www/html/aupdate.php
 ADD sdelete.php /var/www/html/sdelete.php
 ADD sinsert.php /var/www/html/sinsert.php
