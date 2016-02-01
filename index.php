@@ -48,19 +48,16 @@ xmlhttp.send();
 
 <?php
 function teststatus($host,$port) {
-exec("nmap -p " . $port . " " . $host . " --max_rtt_timeout=50ms | grep open", $output, $result);
-//print_r($output);
-if ($result == 0){
-//echo "Ping successful!";
-$restatus="UP";
-$rescss="statsup";
-return array ("restatus" => $restatus, "rescss" => $rescss);
-} else {
-//echo "Ping unsuccessful!";
-$restatus="DOWN";
-$rescss="statsdown";
-return array ("restatus" => $restatus, "rescss" => $rescss);
-}
+	exec("nmap -p " . $port . " " . $host . " -T4 | grep open", $output, $result);
+	if ($result == 0){
+	$restatus="UP";
+	$rescss="statsup";
+	return array ("restatus" => $restatus, "rescss" => $rescss);
+	} else {
+	$restatus="DOWN";
+	$rescss="statsdown";
+	return array ("restatus" => $restatus, "rescss" => $rescss);
+	}
 }
 
 $db = new SQLite3('/data/quicknav.db') or die('DB Open failed');
