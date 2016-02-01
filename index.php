@@ -50,13 +50,13 @@ xmlhttp.send();
 function teststatus($host,$port) {
 	exec("nmap -p " . $port . " " . $host . " -T4 | grep open", $output, $result);
 	if ($result == 0){
-	$restatus="UP";
-	$rescss="statsup";
-	return array ("restatus" => $restatus, "rescss" => $rescss);
+		$restatus="UP";
+		$rescss="statsup";
+		return array ("restatus" => $restatus, "rescss" => $rescss);
 	} else {
-	$restatus="DOWN";
-	$rescss="statsdown";
-	return array ("restatus" => $restatus, "rescss" => $rescss);
+		$restatus="DOWN";
+		$rescss="statsdown";
+		return array ("restatus" => $restatus, "rescss" => $rescss);
 	}
 }
 
