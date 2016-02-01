@@ -48,7 +48,7 @@ xmlhttp.send();
 
 <?php
 function teststatus($host,$port) {
-	exec("nmap -p " . $port . " " . $host . " -T4 | grep open", $output, $result);
+	exec("nmap -p " . $port . " " . $host . " -T5 | grep open", $output, $result);
 	if ($result == 0){
 		$restatus="UP";
 		$rescss="statsup";
