@@ -63,10 +63,8 @@ EXPOSE 21337
 # Database directory for config
 VOLUME /data
 
-# Create database if it doesn't exist
+# Blank database in case it doesn't exist
 ADD database.txt /tmp/database.txt
-# RUN if [ ! -f /data/quicknav.db ]; then cat /tmp/database.txt | sqlite3 /data/quicknav.db; fi
-
 
 # Add apache to runit
 RUN mkdir /etc/service/apache
