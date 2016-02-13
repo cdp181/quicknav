@@ -19,6 +19,7 @@ RUN a2enmod php5
 # Add php files and remove default page
 RUN rm -f /var/www/html/index.html
 ADD index.php /var/www/html/index.php
+ADD iindex.php /var/www/html/iindex.php
 ADD wol.php /var/www/html/wol.php
 ADD style.css /var/www/html/style.css
 ADD font-awesome.min.css /var/www/html/font-awesome.min.css
