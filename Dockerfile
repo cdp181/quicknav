@@ -42,6 +42,7 @@ RUN mkdir -p /var/www/html/font
 RUN mkdir -p /var/www/html/images
 ADD up.png /var/www/html/images/up.png
 ADD down.png /var/www/html/images/down.png
+ADD up.png /var/www/html/images/icon_ipad.png
 RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/FontAwesome.otf
 RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/fontawesome-webfont.eot
 RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/fontawesome-webfont.svg
@@ -52,7 +53,6 @@ RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/glyphic
 RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/glyphicons-halflings.png
 RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/glyphicons-halflings-white.png
 RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/gravatar-default-80x80.png
-RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/icon_ipad.png
 
 # Manually set the apache environment variables in order to get apache to work immediately.
 RUN echo www-data > /etc/container_environment/APACHE_RUN_USER
