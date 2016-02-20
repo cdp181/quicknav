@@ -54,7 +54,7 @@ xmlhttp.send();
        /* To horizontally center images and caption */
        text-align: center;
        /* The width of the container also implies margin around the images. */
-       width: 120px;
+       width: 175px;
       }
 
 
