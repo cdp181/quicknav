@@ -40,6 +40,8 @@ ADD ports.conf /etc/apache2/ports.conf
 # Install binaries
 RUN mkdir -p /var/www/html/font
 RUN mkdir -p /var/www/html/images
+ADD up.png /var/www/html/images/up.png
+ADD down.png /var/www/html/images/down.png
 RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/FontAwesome.otf
 RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/fontawesome-webfont.eot
 RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/fontawesome-webfont.svg
