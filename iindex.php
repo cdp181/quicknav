@@ -86,7 +86,7 @@ while ($row = $result->fetchArray())
    $result2 = $db->query('SELECT app_id, app_name, app_ip, app_port, app_url FROM apps WHERE server_id = ' . $row['server_id'] . '');
      while ($row2 = $result2->fetchArray())
 	  {
-	    ?><div class='item'><li><?php if (!empty($row2['app_url'])) {?><A HREF="<?php echo $row2['app_url'];?>"><?php };?><IMG SRC="status_bg.php?app_id=<?php echo $row2['app_ip']?>&app_port=<?php echo $row2['app_port']?>" height="42" width="42"><span class="caption"><h5><?php echo $row2['app_name'];if (!empty($row2['app_url'])) {?></A><?php };?></h5></span></li></div>
+	    ?><div class='item'><li><?php if (!empty($row2['app_url'])) {?><A HREF="<?php echo $row2['app_url'];?>"><?php };?><IMG SRC="status_bg.php?app_id=<?php echo $row2['app_ip']?>&app_port=<?php echo $row2['app_port']?>"><span class="caption"><h5><?php echo $row2['app_name'];if (!empty($row2['app_url'])) {?></A><?php };?></h5></span></li></div>
 	  <?php
 	  }
 	  ?></ul></div></div></div><?php
