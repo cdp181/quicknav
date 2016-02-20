@@ -18,12 +18,12 @@ $hosttest = $_GET["app_id"];
 $porttest = $_GET["app_port"];
 $testarray = teststatus($hosttest, $porttest);
 if ($testarray["restatus"] == UP) {
-  $im = imagecreatefrompng("/data/up.png");
+  $im = imagecreatefrompng("images/up.png");
   header('Content-Type: image/png');
   imagepng($im);
   imagedestroy($im);
 } else {
-  $im = imagecreatefrompng("/data/down.png");
+  $im = imagecreatefrompng("images/down.png");
   header('Content-Type: image/png');
   imagepng($im);
   imagedestroy($im);
