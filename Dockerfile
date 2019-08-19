@@ -11,10 +11,10 @@ CMD ["/sbin/my_init"]
 RUN apt-get update -q
 
 # Install Dependencies
-RUN apt-get install -qy apache2 php5.6 wget nmap sqlite3 wakeonlan
+RUN apt-get install -qy apache2 libapache2-mod-php wget nmap sqlite3 wakeonlan
 
 # Enable PHP
-RUN a2enmod php5.6
+# RUN a2enmod php5.6
 
 # Add php files and remove default page
 RUN rm -f /var/www/html/index.html
