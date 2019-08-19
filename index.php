@@ -64,7 +64,11 @@ xmlhttp.send();
 
 <?php
 function teststatus($host,$port) {
-	exec("nmap -p " . $port . " " . $host . " -T5 | grep open", $output, $result);
+	if $port == "icmp" {
+		exec("nmap -sn ".$host." | grep latency", $output, $result);
+	} else {
+	        exec("nmap -p " . $port . " " . $host . " -T5 | grep open", $output, $result);
+	}
 	if ($result == 0){
 		$restatus="UP";
 		$rescss="statsup";
