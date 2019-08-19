@@ -14,7 +14,7 @@ RUN apt-get update -q
 RUN apt-get install -qy apache2 php5.6 wget php5-sqlite php5-curl nmap sqlite3 wakeonlan
 
 # Enable PHP
-RUN a2enmod php5
+RUN a2enmod php5.6
 
 # Add php files and remove default page
 RUN rm -f /var/www/html/index.html
