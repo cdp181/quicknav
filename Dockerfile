@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM tutum/apache-php
 MAINTAINER cdp181 <chris@smokingcures.com>
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -11,7 +11,7 @@ CMD ["/sbin/my_init"]
 RUN apt-get update -q
 
 # Install Dependencies
-RUN apt-get install -qy apache2 libapache2-mod-php wget nmap sqlite3 wakeonlan
+RUN apt-get install -qy wget nmap sqlite3 wakeonlan
 
 # Enable PHP
 # RUN a2enmod php5.6
