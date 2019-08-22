@@ -70,6 +70,6 @@ VOLUME /data
 ADD database.txt /tmp/database.txt
 
 # Add apache to runit
-RUN mkdir /etc/service/apache
-ADD apache.sh /etc/service/apache/run
-RUN chmod +x /etc/service/apache/run
+# RUN mkdir /etc/service/apache
+# ADD apache.sh /etc/service/apache/run
+# RUN chmod +x /etc/service/apache/run
