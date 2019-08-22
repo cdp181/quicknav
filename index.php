@@ -64,7 +64,7 @@ xmlhttp.send();
 
 <?php
 function teststatus($host,$port) {
-	if $port == "icmp" {
+	if ($port == "icmp") {
 		exec("nmap -sn ".$host." | grep latency", $output, $result);
 	} else {
 	        exec("nmap -p " . $port . " " . $host . " -T5 | grep open", $output, $result);
