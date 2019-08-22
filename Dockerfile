@@ -11,7 +11,7 @@ ENV HOME /root
 RUN apt-get update -q
 
 # Install Dependencies
-RUN apt-get install -qy wget nmap sqlite3 wakeonlan
+RUN apt-get install -qy wget nmap sqlite3 wakeonlan php5-sqlite
 
 # Enable PHP
 # RUN a2enmod php5.6
