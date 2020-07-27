@@ -32,8 +32,6 @@ $start = $time;
 <link rel="icon" type="image/png" href="favicon.png" />
 <title>QuickNav</title>
 </head><body>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
 <style>
 table {
    border-collapse: collapse;
