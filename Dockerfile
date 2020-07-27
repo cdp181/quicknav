@@ -69,6 +69,7 @@ EXPOSE 21337
 
 # Database directory for config
 VOLUME /data
+VOLUME /appdata
 
 # Blank database in case it doesn't exist
 ADD database.txt /tmp/database.txt
