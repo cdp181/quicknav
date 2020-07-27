@@ -104,5 +104,5 @@ $total_time = round(($finish - $start), 4);
 echo 'Page generated in ' . $total_time . ' seconds.'; 
 
 ?>
-	<BR><a HREF="edit.php">Edit Database</a><a href="darrhax.php">radarr/sonnar hax</a>
+	<BR><a HREF="edit.php">Edit Database</a> / <a href="darrhax.php">radarr/sonnar hax</a>
 </body></html>
