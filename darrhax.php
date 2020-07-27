@@ -87,7 +87,7 @@ while ($row2 = $result2->fetchArray())
 	<td>TypeName : <input type="text" name="TypeName" value="<?php echo "{$row3['TypeName']}";?>"></td>
 	<td>Interval : <input type="text" name="app_ip" value="<?php echo "{$row3['Interval']}";?>"></td>
 	<td>LastExecution : <input type="text" name="LastExecution" value="<?php echo "{$row3['LastExecution']}";?>"></td>
-	</tr><?php }
+	</tr></table><?php }
 	}?>
 
 <script>
