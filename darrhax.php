@@ -55,7 +55,7 @@ $tableidapp = 20;
 
 while ($row = $result->fetchArray())
  {
-   ?><tr class="server" data-id="<?php echo $tableid;?>" data-parent=""><form action="supdate.php" method="get" class="ajaxform"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>">
+   ?><tr class="server" data-id="<?php echo $tableid;?>" data-parent=""><form action="dbupdate.php" method="get" class="ajaxform"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>">
       <td>Name : <input type="text" name="db_name" value="<?php echo "{$row['db_name']}";?>"></td>
 	  <td>Path : <input type="text" name="db_path" size="20" value="<?php echo $row['db_path'];?>" ></td>
 	  <td><input type="submit" value="Update" title="Modify Server"></form></td><form action="dbdelete.php" method="get" class="ajaxform"><td><input type="hidden" name="db_id" value="<?php echo $row['db_id'];?>"><input type="submit" value="Delete" title="Delete Server WARNING! Deletes all corresponding Apps"></form></td>
