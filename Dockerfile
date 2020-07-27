@@ -68,6 +68,7 @@ VOLUME /data
 
 # Blank database in case it doesn't exist
 ADD database.txt /tmp/database.txt
+ADD darrhax.txt /tmp/darrhax.txt
 
 # Add apache to runit
 # RUN mkdir /etc/service/apache
