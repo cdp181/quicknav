@@ -77,13 +77,13 @@ $db2 = new SQLite3('/data/darrhax.db') or die('DB Open failed');
 $result2 = $db2->query('SELECT db_id, db_name, db_path FROM dbs');
 while ($row2 = $result2->fetchArray())
 	{?><h1><?php
-	echo $row2['db_name'];?><table style="width:50%" class="collaptable"><tr>
+	echo $row2['db_name'];?></h1><table style="width:50%" class="collaptable">
 	<?php
 	$db3 = new SQLite3($row2['db_path']) or die('DB Open failed');
 	$result3 = $db3->query('SELECT * FROM ScheduledTasks');
 	while ($row3 = $result3->fetchArray())
 		{?>
-	<td>Id : <input type="text" name="Id" value="<?php echo "{$row3['Id']}";?>"></td>
+	<tr><td>Id : <input type="text" name="Id" value="<?php echo "{$row3['Id']}";?>"></td>
 	<td>TypeName : <input type="text" name="TypeName" value="<?php echo "{$row3['TypeName']}";?>"></td>
 	<td>Interval : <input type="text" name="app_ip" value="<?php echo "{$row3['Interval']}";?>"></td>
 	<td>LastExecution : <input type="text" name="LastExecution" value="<?php echo "{$row3['LastExecution']}";?>"></td>
