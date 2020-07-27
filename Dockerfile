@@ -33,6 +33,9 @@ ADD sinsert.php /var/www/html/sinsert.php
 ADD supdate.php /var/www/html/supdate.php
 ADD jquery.aCollapTable.js /var/www/html/jquery.aCollapTable.js
 ADD darrhax.php /var/www/html/darrhax.php
+ADD dbupdate.php /var/www/html/dbupdate.php
+ADD dbinsert.php /var/www/html/dbinsert.php
+ADD dbdelete.php /var/www/html/dbdelete.php
 
 # Update apache config
 ADD apache-config.conf /etc/apache2/sites-available/000-default.conf
