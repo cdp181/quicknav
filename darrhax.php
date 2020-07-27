@@ -57,7 +57,7 @@ while ($row = $result->fetchArray())
  {
    ?><tr class="server" data-id="<?php echo $tableid;?>" data-parent=""><form action="dbupdate.php" method="get" class="ajaxform"><input type="hidden" name="server_id" value="<?php echo $row['server_id'];?>">
       <td>Name : <input type="text" name="db_name" value="<?php echo "{$row['db_name']}";?>"></td>
-	  <td>Path : <input type="text" name="db_path" size="20" value="<?php echo $row['db_path'];?>" ></td>
+	  <td>Path : <input type="text" name="db_path" size="50" value="<?php echo $row['db_path'];?>" ></td>
 	  <td><input type="submit" value="Update" title="Modify Server"></form></td><form action="dbdelete.php" method="get" class="ajaxform"><td><input type="hidden" name="db_id" value="<?php echo $row['db_id'];?>"><input type="submit" value="Delete" title="Delete Server WARNING! Deletes all corresponding Apps"></form></td>
 	 </tr><?php
         $tableid++;
@@ -70,7 +70,25 @@ while ($row = $result->fetchArray())
 	  <td colspan="2"><input type="submit" value="Insert" title="Add new DB"></form></td>
 	 </tr>
 
-</table>
+</table><BR><table style="width:50%" class="collaptable">
+<?php
+
+$db2 = new SQLite3('/data/darrhax.db') or die('DB Open failed');
+$result2 = $db2->query('SELECT db_id, db_name, db_path FROM dbs');
+while ($row2 = $result2->fetchArray())
+	{?><h1><?php
+	echo $row2['db_name'];?><table style="width:50%" class="collaptable"><tr>
+	$db3 = new SQLite3(db_path) or die('DB Open failed');
+	$result3 = $db3->query('SELECT * FROM ScheduledTasks');
+	while ($row3 = $result3->fetchArray())
+		{?>
+	<td>Id : <input type="text" name="Id" value="<?php echo "{$row3['Id']}";?>"></td>
+	<td>TypeName : <input type="text" name="TypeName" value="<?php echo "{$row3['TypeName']}";?>"></td>
+	<td>Interval : <input type="text" name="app_ip" value="<?php echo "{$row3['Interval']}";?>"></td>
+	<td>LastExecution : <input type="text" name="LastExecution" value="<?php echo "{$row3['LastExecution']}";?>"></td>
+	</tr><?php }
+	}?>
+
 <script>
 $(document).ready(function(){
   $('.collaptable').aCollapTable({ 
