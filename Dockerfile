@@ -72,8 +72,6 @@ ADD darrhax.txt /tmp/darrhax.txt
 ADD dbcreate.sh /tmp/dbcreate.sh
 RUN chmod +x /tmp/dbcreate.sh
 
-ENTRYPOINT ["/tmp/dbcreate.sh"]
-
 # Add apache to runit
 # RUN mkdir /etc/service/apache
 # ADD apache.sh /etc/service/apache/run
