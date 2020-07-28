@@ -87,6 +87,7 @@ while ($row2 = $result2->fetchArray())
 	<td><?php echo "{$row3['TypeName']}";?></td>
 	<form action="darrupdate.php" method="get" class="ajaxform">
 	<input type="hidden" name="Id" value="<?php echo $row3['Id'];?>">
+	<input type="hidden" name="db_path" value="<?php echo $row2['db_path'];?>">
 	<td>Interval : <input type="text" name="Interval" value="<?php echo "{$row3['Interval']}";?>"></td>
 	<td>LastExecution : <input type="text" name="LastExecution" value="<?php echo "{$row3['LastExecution']}";?>"></td>
 	<td><input type="submit" value="Update" title="Update Schedule"></form></td>
