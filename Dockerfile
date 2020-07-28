@@ -81,7 +81,6 @@ RUN chmod +x /tmp/dbcreate.sh
 COPY dbcreate.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/dbcreate.sh
 RUN ln -s /usr/local/bin/dbcreate.sh / # backwards compat
-ENTRYPOINT ["dbcreate.sh"]
 
 # Add apache to runit
 # RUN mkdir /etc/service/apache
