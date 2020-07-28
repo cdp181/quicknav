@@ -82,7 +82,7 @@ function teststatus($host,$port) {
 
 $db = new SQLite3('/data/quicknav.db') or die('DB Open failed');
 $db->query('CREATE TABLE IF NOT EXISTS "apps" ("app_id" integer NULL PRIMARY KEY AUTOINCREMENT,"server_id" integer NULL,"app_name" text NULL,"app_port" integer NULL,"app_ip" text NULL,"app_url" text NULL)');
-$db->query('CREATE TABLE IF NOT EXISTS "servers" ("section_size" integer NOT NULL DEFAULT '2',"server_id" integer NULL PRIMARY KEY AUTOINCREMENT,"server_name" text NULL,"wol" integer NULL,"server_mac" text NULL,"server_ip" text NULL)');
+$db->query('CREATE TABLE IF NOT EXISTS "servers" ("section_size" integer NOT NULL DEFAULT "2","server_id" integer NULL PRIMARY KEY AUTOINCREMENT,"server_name" text NULL,"wol" integer NULL,"server_mac" text NULL,"server_ip" text NULL)');
 
 $result = $db->query('SELECT server_id, server_name, server_mac, wol, section_size FROM servers ORDER BY section_size DESC');
 while ($row = $result->fetchArray())
