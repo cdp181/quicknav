@@ -48,6 +48,7 @@ tr.app {background-color:#ff9900;margin:0;border:0;padding:0;}
 <?php
 
 $db = new SQLite3('/data/darrhax.db') or die('DB Open failed');
+$db->query('CREATE TABLE IF NOT EXISTS "dbs" ("db_id" integer NULL PRIMARY KEY AUTOINCREMENT,"db_name" text NULL,"db_path" text NULL)');
 
 $result = $db->query('SELECT db_id, db_name, db_path FROM dbs');
 
