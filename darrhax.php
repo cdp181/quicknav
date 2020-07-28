@@ -83,10 +83,13 @@ while ($row2 = $result2->fetchArray())
 	$result3 = $db3->query('SELECT * FROM ScheduledTasks');
 	while ($row3 = $result3->fetchArray())
 		{?>
-	<tr><td>Id : <input type="text" name="Id" value="<?php echo "{$row3['Id']}";?>"></td>
-	<td>TypeName : <input type="text" name="TypeName" value="<?php echo "{$row3['TypeName']}";?>"></td>
-	<td>Interval : <input type="text" name="app_ip" value="<?php echo "{$row3['Interval']}";?>"></td>
+	<tr><td><?php echo "{$row3['Id']}";?></td>
+	<td><?php echo "{$row3['TypeName']}";?></td>
+	<form action="darrupdate.php" method="get" class="ajaxform">
+	<input type="hidden" name="Id" value="<?php echo $row3['Id'];?>">
+	<td>Interval : <input type="text" name="Interval" value="<?php echo "{$row3['Interval']}";?>"></td>
 	<td>LastExecution : <input type="text" name="LastExecution" value="<?php echo "{$row3['LastExecution']}";?>"></td>
+	<td><input type="submit" value="Update" title="Update Schedule"></form></td>
 	</tr><?php }?>
 	</table><?php
 	}?>
