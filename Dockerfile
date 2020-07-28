@@ -36,6 +36,7 @@ ADD darrhax.php /var/www/html/darrhax.php
 ADD dbupdate.php /var/www/html/dbupdate.php
 ADD dbinsert.php /var/www/html/dbinsert.php
 ADD dbdelete.php /var/www/html/dbdelete.php
+ADD darrupdate.php /var/www/html/darrupdate.php
 
 # Update apache config
 ADD apache-config.conf /etc/apache2/sites-available/000-default.conf
