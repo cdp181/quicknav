@@ -43,7 +43,8 @@ tr.server {background-color:#33CC33;margin:0;border:0;padding:0;}
 tr.app {background-color:#ff9900;margin:0;border:0;padding:0;}
 </style>
 <A HREF="index.php">Back</A>
-<table style="width:95%" class="collaptable">
+<table style="border:1px solid black;margin-left:auto;margin-right:auto;" class="collaptable">
+
 <?php
 
 $db = new SQLite3('/data/darrhax.db') or die('DB Open failed');
@@ -70,7 +71,7 @@ while ($row = $result->fetchArray())
 	  <td colspan="2"><input type="submit" value="Insert" title="Add new DB"></form></td>
 	 </tr>
 
-</table><BR><table style="width:50%" class="collaptable">
+</table><BR><table style="border:1px solid black;margin-left:auto;margin-right:auto;" class="collaptable">
 <?php
 
 $db2 = new SQLite3('/data/darrhax.db') or die('DB Open failed');
