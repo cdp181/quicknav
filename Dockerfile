@@ -79,6 +79,7 @@ ADD dbcreate.sh /tmp/dbcreate.sh
 RUN chmod +x /tmp/dbcreate.sh
 
 COPY dbcreate.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/dbcreate.sh
 RUN ln -s /usr/local/bin/dbcreate.sh / # backwards compat
 ENTRYPOINT ["dbcreate.sh"]
 
