@@ -2,7 +2,7 @@ FROM tutum/apache-php
 MAINTAINER cdp181 <chris@smokingcures.com>
 ENV DEBIAN_FRONTEND noninteractive
 
-# Set correct environment variables
+# Set correct environment variables.
 ENV HOME /root
 
 RUN apt-get update -q
