@@ -17,7 +17,7 @@ return array ("restatus" => $restatus, "rescss" => $rescss);
 $hosttest = $_GET["app_id"];
 $porttest = $_GET["app_port"];
 $testarray = teststatus($hosttest, $porttest);
-if ($testarray["restatus"] == UP) {
+if ($testarray["restatus"] == 'UP') {
   $im = imagecreatefrompng("images/up.png");
   header('Content-Type: image/png');
   imagepng($im);
